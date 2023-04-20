@@ -47,12 +47,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
@@ -74,12 +74,12 @@ xterm*|rxvt*)
         PS1="\e[48;5;124m \u \e[38;5;124m\e[48;5;238m \w\a \e[0m\e[38;5;238m\e[0m "
     else
         if [ $EUID = 1000 ]; then
-            PS1="\e[48;5;023m\e[38;5;188m oisín \e[38;5;023m\e[48;5;188m \w\a \e[0m\e[38;5;188m\e[0m "
+            PS1="\[\e[48;5;023m\]\[\e[38;5;188m\] oisín \[\e[38;5;023m\]\[\e[48;5;188m\] \w\a \[\e[0m\e[38;5;188m\]\[\e[0m \]\]"
         else
             PS1="\e[48;5;209m \u ~ $EUID \e[38;5;209m\e[48;5;238m \w\a \e[0m\e[38;5;238m\e[0m "
         fi
     fi
-    #PS1="oisin  ~ "
+    #PS1="oisin  ~ "
     ;;
 *)
     ;;
