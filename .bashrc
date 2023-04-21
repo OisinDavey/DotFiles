@@ -52,7 +52,7 @@ if [ -n "$force_color_prompt" ]; then
         # a case would tend to support setf rather than setaf.)
         color_prompt=yes
     else
-        color_prompt=
+        color_prompt=no
     fi
 fi
 
@@ -84,6 +84,8 @@ xterm*|rxvt*)
 *)
     ;;
 esac
+
+PROMPT_DIRTRIM=4
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
